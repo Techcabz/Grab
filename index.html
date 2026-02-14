@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's</title>
+    <style>
+        :root {
+            --soft-pink: #ffdae9;
+            --deep-pink: #d63384;
+            --leaf-green: #4caf50;
+        }
+
+        body {
+            background: radial-gradient(circle, #fff0f5 0%, #ffe4e1 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            overflow: hidden;
+        }
+
+        .card {
+            position: relative;
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(214, 51, 132, 0.2);
+            text-align: center;
+            max-width: 350px;
+            border: 2px solid var(--soft-pink);
+        }
+
+        h1 {
+            color: var(--deep-pink);
+            font-size: 2.2rem;
+            margin: 0 0 20px 0;
+            letter-spacing: 1px;
+        }
+
+        .portrait-frame {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 50px; /* Space for the bouquet */
+        }
+
+        .portrait {
+            width: 280px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 100px 100px 20px 20px; /* Elegant arched top */
+            border: 8px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* The Tulip Bouquet */
+        .bouquet {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.15));
+            z-index: 10;
+            cursor: default;
+        }
+
+        /* Floating individual tulips */
+        .floating-flower {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
+
+        .f1 { top: -10px; left: -20px; animation-delay: 0s; }
+        .f2 { top: -10px; right: -20px; animation-delay: 1s; }
+        .f3 { bottom: 60px; left: -30px; animation-delay: 2s; }
+        .f4 { bottom: 60px; right: -30px; animation-delay: 1.5s; }
+
+        .footer-text {
+            color: var(--deep-pink);
+            font-size: 1.1rem;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Happy Valentine's</h1>
+        
+        <div class="portrait-frame">
+            <img src="./pic/demo.jpg" alt="Valentine Portrait" class="portrait">
+            
+            <div class="floating-flower f1">🌷</div>
+            <div class="floating-flower f2">🌷</div>
+            <div class="floating-flower f3">🌷</div>
+            <div class="floating-flower f4">🌷</div>
+
+            <div class="bouquet">💐</div>
+        </div>
+
+        <div class="footer-text">&nbsp;</div>
+    </div>
+
+</body>
+</html>
